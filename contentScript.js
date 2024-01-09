@@ -14,7 +14,7 @@ function afterDOMLoaded() {
   var totalVacationHours = 0;
   if (leaveTable) {
     for (let row of leaveTable.rows) {
-      if (row.cells[1].innerText.includes("Annual vacation") &&
+      if (row.cells[1].innerText.includes(`Annual vacation - ${year}`) &&
         row.cells[11].innerText === " Approved") {
         let duration = parseInt(row.cells[7].innerText);
         totalVacationHours += parseInt(duration);
